@@ -1,18 +1,18 @@
-﻿using System;
+﻿using System
 
 namespace Assignment2
 {
-    public class Student
+    public record ImutableStudent
     {
-        public int id { get; set; }
-        public string GivenName { get; set; }
-        public string Surname { get; set; }
+        public int id { get; init; }
+        public string GivenName { get; init; }
+        public string Surname { get; init; }
         public Status status { get => getStatus(); }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
-        public DateTime GraduationDate { get; set; }
+        DateTime StartDate { get; init; }
+        DateTime EndDate { get; init; }
+        public DateTime GraduationDate { get; init; }
         
-        public Student(int Id)
+        public ImutableStudent(int Id)
         {
             this.id = Id;
         }
@@ -37,17 +37,5 @@ namespace Assignment2
         {
             return "Student#" + id + ": " + GivenName + " " + Surname + " is " + status;
         }
-        
-        
-
     }
-    
-    
-
-    public enum Status
-    {
-        New, Active, Dropout, Graduated
-    }
-
-    
 }

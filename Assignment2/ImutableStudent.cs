@@ -1,4 +1,4 @@
-﻿using System
+﻿using System;
 
 namespace Assignment2
 {
@@ -33,9 +33,6 @@ namespace Assignment2
                 return Status.Graduated;}
         }
 
-        public string ToString()
-        {
-            return "Student#" + id + ": " + GivenName + " " + Surname + " is " + status;
-        }
+
     }
 }

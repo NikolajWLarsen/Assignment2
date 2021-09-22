@@ -2,17 +2,17 @@
 
 namespace Assignment2
 {
-    public record ImutableStudent
+    public record ImmutableStudent
     {
         public int id { get; init; }
         public string GivenName { get; init; }
         public string Surname { get; init; }
         public Status status { get => getStatus(); }
-        DateTime StartDate { get; init; }
-        DateTime EndDate { get; init; }
+        public DateTime StartDate { get; init; }
+        public DateTime EndDate { get; init; }
         public DateTime GraduationDate { get; init; }
         
-        public ImutableStudent(int Id)
+        public ImmutableStudent(int Id)
         {
             this.id = Id;
         }
@@ -32,7 +32,12 @@ namespace Assignment2
             {
                 return Status.Graduated;}
         }
-
+        
+        public override string ToString()
+        {
+            return "Student#" + id + ": " + GivenName + " " + Surname + " is " + status;
+        }
 
     }
+    
 }

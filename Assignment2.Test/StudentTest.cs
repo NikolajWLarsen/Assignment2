@@ -6,6 +6,20 @@ namespace Assignment2.Test
     public class StudentTest
     {
         [Fact]
+        public void ImmutableStudent_GetID_returnID()
+        {
+            // Assign
+            var student = new Student(1234);
+            var expected = 1234;
+            
+            // Act
+            var result = student.id;
+            
+            // Assert
+            Assert.Equal(expected,result);
+        }
+        
+        [Fact]
         public void Student_GetStatus_ReturnActive()
         {
             //Assign

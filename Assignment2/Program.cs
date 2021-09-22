@@ -6,7 +6,7 @@ namespace Assignment2
     {
         static void Main(string[] args)
         {
-            var s = new ImutableStudent(1234);
+            var s = new ImmutableStudent(1234);
             
             Console.WriteLine(s.ToString());
         }
